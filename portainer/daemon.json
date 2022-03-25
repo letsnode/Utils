@@ -1,0 +1,8 @@
+{
+    "hosts": ["unix:///var/run/docker.sock", "tcp://$INTERNALIP:2376"],
+    "tls": true,
+    "tlscacert": "/root/certs/ca.pem",
+    "tlscert": "/root/certs/server-cert.pem",
+    "tlskey": "/root/certs/server-key.pem",
+    "tlsverify": true
+}
