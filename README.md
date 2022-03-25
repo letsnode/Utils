@@ -1,2 +1,2 @@
 # Utils
-This repository contains useful scriptis for server management.
+This repository contains useful scriptis for server management. More usefull tools are coming soon...
