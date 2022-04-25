@@ -61,11 +61,14 @@ Ba_P='\033[45m'      # Purple
 Ba_C='\033[46m'      # Cyan
 Ba_Gy='\033[47m'     # Gray
 
-option_value(){ echo "$1" | sed -e 's%^--[^=]*=%%g; s%^-[^=]*=%%g'; }
+function option_value(){ 
+	echo "$1" | sed -e 's%^--[^=]*=%%g; s%^-[^=]*=%%g'; 
+}
+
 while test $# -gt 0; do
 	case "$1" in
 	-h|--help)
-		. <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/logo.sh)
+		. <(wget -qO- https://github.com/letsnode/Utils/blob/main/bashbuilder/logo.sh)
 		echo
 		echo -e "${C_LGn}Functionality${RES}: the script assigns variables with colors to be used in the texts (e.g."
 		echo -e "in the 'echo' and 'printf' commands)"
@@ -123,8 +126,8 @@ while test $# -gt 0; do
 		echo -e "└────────┴─────────┴──────────┘  └────────┴─────────┴──────────┘"
 		echo
 		echo -e "${C_LGn}Useful URLs${RES}:"
-		echo -e "https://github.com/SecorD0/utils/blob/main/colors.sh - script URL"
-		echo -e "https://t.me/letskynode — node Community"
+		echo -e "Script URL: https://github.com/letsnode/Utils/edit/main/bashbuilder/colors.sh"
+		echo -e "Telegram community: https://t.me/letskynode"
 		echo
 		return 0 2>/dev/null; exit 0
 		;;
