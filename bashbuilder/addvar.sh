@@ -6,7 +6,7 @@ type="export"
 rename=""
 delete_type="none"
 
-. <(wget -qO- https://github.com/letsnode/Utils/blob/main/bashbuilder/colors.sh) --
+. <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/colors.sh) --
 
 function option_value() { 
     echo "$1" | sed -e 's%^--[^=]*=%%g; s%^-[^=]*=%%g';
@@ -19,7 +19,7 @@ function printf_n() {
 while test $# -gt 0; do
 	case "$1" in
 	-h|--help)
-		. <(wget -qO- https://github.com/letsnode/Utils/blob/main/bashbuilder/logo.sh)
+		. <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/logo.sh)
 		echo
 		echo -e "${C_LGn}Functionality${RES}: the script inserts variable or alias to ${C_LGn}$HOME/.bash_profile${RES}"
 		echo
