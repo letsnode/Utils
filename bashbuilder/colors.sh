@@ -68,7 +68,7 @@ function option_value(){
 while test $# -gt 0; do
 	case "$1" in
 	-h|--help)
-		. <(wget -qO- https://github.com/letsnode/Utils/blob/main/bashbuilder/logo.sh)
+		. <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/logo.sh)
 		echo
 		echo -e "${C_LGn}Functionality${RES}: the script assigns variables with colors to be used in the texts (e.g."
 		echo -e "in the 'echo' and 'printf' commands)"
@@ -126,7 +126,7 @@ while test $# -gt 0; do
 		echo -e "└────────┴─────────┴──────────┘  └────────┴─────────┴──────────┘"
 		echo
 		echo -e "${C_LGn}Useful URLs${RES}:"
-		echo -e "Script URL: https://github.com/letsnode/Utils/edit/main/bashbuilder/colors.sh"
+		echo -e "Script URL: https://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/colors.sh"
 		echo -e "Telegram community: https://t.me/letskynode"
 		echo
 		return 0 2>/dev/null; exit 0
