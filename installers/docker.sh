@@ -3,7 +3,7 @@
 dive="false"
 action="install"
 
-. <(wget -qO- hhttps://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/colors.sh) --
+. <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/colors.sh) --
 
 function option_value() { 
         echo "$1" | sed -e 's%^--[^=]*=%%g; s%^-[^=]*=%%g';
