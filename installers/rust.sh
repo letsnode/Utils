@@ -4,12 +4,12 @@ function="install"
 nightly="false"
 
 # Options
-. <(wget -qO- hhttps://github.com/letsnode/Utils/blob/main/bashbuilder/colors.sh) --
+. <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/colors.sh) --
 option_value(){ echo "$1" | sed -e 's%^--[^=]*=%%g; s%^-[^=]*=%%g'; }
 while test $# -gt 0; do
 	case "$1" in
 	-h|--help)
-		. <(wget -qO- https://github.com/letsnode/Utils/blob/main/bashbuilder/logo.sh)
+		. <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/logo.sh)
 		echo
 		echo -e "${C_LGn}Functionality${RES}: the script installs or uninstalls Rust"
 		echo
@@ -21,7 +21,7 @@ while test $# -gt 0; do
 		echo -e "  -u, --uninstall  uninstall Rust"
 		echo
 		echo -e "${C_LGn}Useful URLs${RES}:"
-		echo -e "Script URL: https://github.com/letsnode/Utils/new/main/installers/rust.sh"
+		echo -e "Script URL: https://raw.githubusercontent.com/letsnode/Utils/main/installers/rust.sh"
 		echo -e "https://www.rust-lang.org/tools/install — Rust installation"
 		echo -e "https://t.me/letskynode — node Community"
 		echo -e "https://teletype.in/@letskynode — guides and articles"
