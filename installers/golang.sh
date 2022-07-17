@@ -3,7 +3,7 @@
 action="install"
 go_version="1.18.1"
 
-. <(wget -qO- https://github.com/letsnode/Utils/blob/main/bashbuilder/colors.sh) --
+. <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/colors.sh) --
 
 function option_value() {
   echo "$1" | sed -e 's%^--[^=]*=%%g; s%^-[^=]*=%%g';
@@ -22,7 +22,7 @@ function install() {
 		sudo rm -rf /usr/local/go
 		sudo tar -C /usr/local -xzf "go${go_version}.linux-amd64.tar.gz"
 		rm "go${go_version}.linux-amd64.tar.gz"
-		. <(wget -qO- https://github.com/letsnode/Utils/blob/main/bashbuilder/addvar.sh) -n "PATH" -v "$PATH:/usr/local/go/bin:$HOME/go/bin"
+		. <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/addvar.sh) -n "PATH" -v "$PATH:/usr/local/go/bin:$HOME/go/bin"
 	fi
 }
 
@@ -35,7 +35,7 @@ function uninstall() {
 while test $# -gt 0; do
 	case "$1" in
 	-h|--help)
-		. <(wget -qO- https://github.com/letsnode/Utils/blob/main/bashbuilder/logo.sh)
+		. <(wget -qO- https://raw.githubusercontent.com/letsnode/Utils/main/bashbuilder/logo.sh)
 		echo
 		echo -e "${C_LGn}Functionality${RES}: the script installs or uninstalls GO"
 		echo
@@ -49,7 +49,7 @@ while test $# -gt 0; do
 		echo -e "You can use either \"=\" or \" \" as an option and value ${C_LGn}delimiter${RES}"
 		echo
 		echo -e "${C_LGn}Useful URLs${RES}:"
-		echo -e "https://github.com/letsnode/Utils/blob/main/installers/golang.sh - script URL"
+		echo -e "https://raw.githubusercontent.com/letsnode/Utils/main/installers/golang.sh - script URL"
 		echo -e "https://t.me/letskynode — node Community"
 		echo -e "https://teletype.in/@letskynode — guides and articles"
 		echo
